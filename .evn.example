@@ -1,0 +1,12 @@
+PORT=5000
+DB_URL=url_mongo
+JWT_ACCESS_SECRET=jwt-secret-key
+JWT_REFREFSH_SECRET=jwt-refresh-secret-secret-key
+
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=email
+SMTP_PASS=email_pass
+
+API_URL=http://localhost:5000
+CLIENT_URL=https://yandex.ru/
