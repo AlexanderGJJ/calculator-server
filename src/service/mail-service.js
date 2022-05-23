@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer')
+const nodemailer = require('nodemailer');
 
 class MailService {
     constructor() {
@@ -9,7 +9,7 @@ class MailService {
                 user: process.env.SMTP_USER,
                 pass: process.env.SMTP_PASS
             },
-            secure: false // почитать про поле
+            secure: true // почитать про поле
         })
     }
 

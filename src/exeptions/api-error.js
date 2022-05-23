@@ -1,4 +1,3 @@
-// const {static} = require("express");
 module.exports = class ApiError extends Error {
     status;
     errors;
