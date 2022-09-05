@@ -66,7 +66,10 @@ class userService {
     }
 
     async refresh (refreshToken) {
-        if (!refreshToken) {
+
+        console.log(refreshToken, 'refreshToken')
+
+        if (!refreshToken) { // undefined
             throw ApiError.UnAuthorizedError();
         }
 
@@ -81,13 +84,7 @@ class userService {
         const userDto = new UserDto(user);
         const tokens = tokenService.generateToken({ ...userDto });
         await tokenService.saveToken(userDto.id, tokens.refreshToken); // тут логика дублируется поэтому можно вынести в отдельную функцию
-
         return {...tokens, user: userDto };
-    }
-
-    async getAllusers () {
-        const users = await UserModel.find();
-        return users;
     }
 }
 
